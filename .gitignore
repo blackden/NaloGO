@@ -78,3 +78,8 @@ htmlcov/
 .cache/
 
 .pypirc
+
+# Local Claude/agent meta — never upstream
+CLAUDE.md
+.claude/
+.remember/
