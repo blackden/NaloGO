@@ -38,9 +38,7 @@ class TestUserAPI:
         }
 
         with respx.mock(base_url="https://lknpd.nalog.ru/api/v1") as respx_mock:
-            respx_mock.get("/user").mock(
-                return_value=httpx.Response(200, json=profile)
-            )
+            respx_mock.get("/user").mock(return_value=httpx.Response(200, json=profile))
 
             result = await client.user().get()
 
